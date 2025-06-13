@@ -68,7 +68,7 @@ public class FreeBoardController {
         FreeBoard savedBord = freeBoardService.insert(freeBoard);
         System.out.println("savedBoard = " + savedBord);
 
-        return "redirect:/board/list"; //Post Redriect Get 패턴
+        return "redirect:/board/list"; //Post Redriect Get 패턴 -멱등성
     }
 
     /** 상세보기

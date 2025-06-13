@@ -25,9 +25,9 @@ public class FreeBoardServiceImpl implements FreeBoardService {
      * */
     @Override
     public List<FreeBoard> selectAll() {
-        return freeBoardRepository.findAll();
+//        return freeBoardRepository.findAll();
         ////fetch조인 사용하기 ///////////////////////
-      //return freeBoardRepository.join01();
+      return freeBoardRepository.join01();
     }
 
     @Override

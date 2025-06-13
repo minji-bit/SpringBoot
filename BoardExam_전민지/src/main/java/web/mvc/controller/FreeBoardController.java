@@ -27,10 +27,9 @@ public class FreeBoardController {
         return "board/" + url;
     }
    /* @GetMapping("/list")
-    public String selectAll(Model model) {
+    public void selectAll(Model model) {
         List<FreeBoard> list=freeBoardService.selectAll();
         model.addAttribute("freeList",list);
-        return "/board/list";
     }*/
 
     @GetMapping("/list")

@@ -3,6 +3,7 @@ package web.mvc.domain;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
 
@@ -17,6 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @ToString(exclude = "repliesList")
+@DynamicUpdate
 public class FreeBoard { //db에 free_board
 	@Id //pk
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

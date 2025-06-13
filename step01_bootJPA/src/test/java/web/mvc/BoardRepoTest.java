@@ -45,7 +45,7 @@ public class BoardRepoTest {
      */
     @Test
     @DisplayName("레코드 추가")
-    @Disabled
+   // @Disabled
     public void insert() {
         //save 메소드는 등록 or 수정
         //저장

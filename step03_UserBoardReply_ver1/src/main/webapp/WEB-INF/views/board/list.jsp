@@ -123,7 +123,7 @@ th, td{text-align: center}
 		        <td>
 					<a href="${pageContext.request.contextPath}/board/read/${board.bno}"> 
 					  ${board.subject} /  Reply count : 
-<%--					  <b style="color:red">  ${board.repliesList.size() }</b>--%>
+					  <b style="color:red">  ${board.repliesList.size() }</b>
 					</a>
 					
 		        </td>

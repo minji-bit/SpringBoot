@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpSession;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -19,10 +20,9 @@ import web.mvc.exception.ErrorCode;
  *   : 만약 인증을 안했다면 오류페이지로 이동 할수 있도록한다.
  * */
 
-//@Service // 생성
-//@Aspect
+@Component // 생성
+@Aspect
 public class SessionCheckAdvice {
-
     /**
      *  Controller영역에서(joinPoint) 매개변수로 HttpSession을 전달하지 않고
      *  Service or dao 영역에서 HttpServletRequest정보를 사용 할수 있도록 할수 있는 방법
@@ -44,7 +44,6 @@ public class SessionCheckAdvice {
         if(session ==null || session.getAttribute("loginUser") == null) {
             throw new BasicException(ErrorCode.ACCESS_DENIED);
         }
-
     }
 }
 

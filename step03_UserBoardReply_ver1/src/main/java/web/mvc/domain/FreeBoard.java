@@ -50,8 +50,9 @@ public class FreeBoard { //db에 free_board
 	 * 	CascadeType.DETACH: 부모 엔티티를 분리할 때 연관된 자식 엔티티도 함께 분리합니다.
 	 * */
 
-	//@OneToMany(mappedBy = "freeBoard" , cascade = CascadeType.ALL ,fetch = FetchType.LAZY ) // 참조되있는걸 지울 때 참조 위배되는걸 설정한다
-	@OneToMany(mappedBy = "freeBoard") //  지연로딩
+	@OneToMany(mappedBy = "freeBoard" , cascade = CascadeType.ALL ,fetch = FetchType.LAZY ) // 참조되있는걸 지울 때 참조 위배되는걸 설정한다
+//	@OneToMany(mappedBy = "freeBoard") //  지연로딩
+//	@OneToMany(mappedBy = "freeBoard", fetch = FetchType.EAGER) //  즉시로딩
 	private List<Reply> repliesList;
 
 
